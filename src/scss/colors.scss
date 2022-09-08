@@ -1,0 +1,12 @@
+@use 'colors/core.scss' as core;
+
+$background-primary: core.$gray-95;
+$background-secondary: core.$gray-90;
+
+$font-primary: core.$white-alpha-100;
+$font-primary-hover: core.$gray-60;
+$font-secondary: core.$gray-70;
+$font-selected: core.$blue-40;
+
+$border: core.$white-alpha-20;
+

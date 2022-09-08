@@ -1,0 +1,11 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "home": "home",
+    "under-construction": "under-construction",
+    "copyright": "©2022 Cisco and/or its affiliates. All Rights Reserved.",
+    "terms-conditions": "Terms & Conditions",
+    "privac-statementy": "Privacy Statement",
+    "trademarks": "Trademarks"
+  }
+}

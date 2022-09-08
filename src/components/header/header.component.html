@@ -1,0 +1,5 @@
+<div class="header">
+    <a class="logo" routerLink="/"></a>
+    <a class="nav" *ngFor="let nav of navs" [routerLink]="nav.path" routerLinkActive="current">{{nav.name}}</a>
+    <mds-language class="language"></mds-language>
+</div>

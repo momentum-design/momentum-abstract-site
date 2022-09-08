@@ -1,0 +1,72 @@
+@use 'colors.scss' as colors;
+@use 'mixins.scss' as mixins;
+@use 'settings.scss' as settings;
+@use 'functions.scss' as func;
+
+$height-header: 4rem;
+$font-nav: 1.25rem;
+$padding-header: 2rem;
+$padding-header-small: 0.5rem;
+$padding-nav:0.5rem;
+$margin-nav:1rem;
+
+:host {
+    @include mixins.block(100%, $height-header);
+}
+
+.header {
+    @include mixins.block(100%, $height-header, flex);
+    @include mixins.position(0rem, 0rem, fixed);
+
+    z-index: settings.$z-index-fixed;
+    align-items: center;
+
+    .logo {
+        @include mixins.block(func.rem-calc(140), $height-header);
+        flex: 1;
+        margin-left: $padding-header;
+        background: url('../../assets/img/logo.svg') no-repeat left center;
+        cursor: pointer;
+    }
+
+    .nav {
+        @include mixins.block(auto, $height-header);
+        padding: 0 $padding-nav;
+        margin-right: $margin-nav;
+        flex: none;
+        font-size: $font-nav;
+        text-align: center;
+        text-transform: lowercase;
+        cursor: pointer;
+
+        &:hover {
+            color: colors.$font-primary-hover;
+        }
+    }
+
+    .language {
+        flex: none;
+        margin-right: $font-nav;
+    }
+
+    .current, .current:hover{
+        color: colors.$font-selected!important;
+    }
+}
+
+@media screen and (max-width: settings.$response-width-small) {
+    .header {
+        .logo {
+            width: func.rem-calc(40);
+            margin-left: $padding-header-small;
+        }
+
+        .nav {
+            margin-right:0;
+        }
+
+        .language {
+            margin-right:0.25rem;
+        }
+    }
+}

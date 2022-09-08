@@ -1,0 +1,11 @@
+{
+  "locale": "zh",
+  "translations": {
+    "home": "首页",
+    "under-construction": "建设中",
+    "copyright": "©版权归思科或其附属公司所有。",
+    "terms-conditions": "条款和条件",
+    "privac-statementy": "隐私声明",
+    "trademarks": "商标"
+  }
+}
