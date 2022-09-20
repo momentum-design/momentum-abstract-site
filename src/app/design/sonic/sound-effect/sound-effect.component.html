@@ -1,0 +1,12 @@
+<div class='md-content'>
+    <ng-container  *ngFor="let series of sounds">
+        <h1>{{ series.name }}</h1>
+        <div class="sonic-line" *ngFor="let sound of series.files">
+            <span>{{ sound.name }}</span>
+            <audio controls preload>
+                <source [src]="sound.src" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </ng-container>
+</div>

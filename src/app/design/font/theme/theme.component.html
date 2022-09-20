@@ -1,0 +1,36 @@
+<div class='md-content'>
+    <h1>Theme-Apps</h1>
+    <div class='tr'>
+        <div class='td-f'>Token</div>
+        <div class='td'>Exmaple</div>
+        <div class='td'>Size</div>
+        <div class='td'>Line-height</div>
+        <div class='td'>Weight</div>
+        <div class='td'>Decoration</div>
+    </div>
+    <div  *ngFor="let nav of apps" class='tr' [ngStyle]="{height: nav.value.lineHeight+'px', 'line-height': nav.value.lineHeight+'px'}">
+        <div class='td-f'>{{ nav.token }}</div>
+        <div [ngClass]="[nav.class,'td','td-large']">Ag</div>
+        <div class='td'>{{ nav.value.fontSize }}</div>
+        <div class='td'>{{ nav.value.lineHeight }}</div>
+        <div class='td'>{{ nav.value.weight }}</div>
+        <div class='td'>{{ nav.value.decoration }}</div>
+    </div>
+    <h1>Theme-Display</h1>
+    <div class='tr'>
+        <div class='td-f'>Token</div>
+        <div class='td'>Exmaple</div>
+        <div class='td'>Size</div>
+        <div class='td'>Line-height</div>
+        <div class='td'>Weight</div>
+        <div class='td'>Decoration</div>
+    </div>
+    <div  *ngFor="let nav of display" class='tr' [ngStyle]="{height: nav.value.lineHeight+'px', 'line-height': nav.value.lineHeight+'px'}">
+        <div class='td-f'>{{ nav.token }}</div>
+        <div [ngClass]="[nav.class,'td','td-large']">Ag</div>
+        <div class='td'>{{ nav.value.fontSize }}</div>
+        <div class='td'>{{ nav.value.lineHeight }}</div>
+        <div class='td'>{{ nav.value.weight }}</div>
+        <div class='td'>{{ nav.value.decoration }}</div>
+    </div>
+</div>

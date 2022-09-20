@@ -1,97 +1,64 @@
-@use 'colors.scss' as colors;
+@use 'theme/light.scss' as colors;
 @use 'mixins.scss' as mixins;
 @use 'settings.scss' as settings;
 
-$footer-height: 6.5rem;
-$footer-height-mobile:8.375rem;
-$footer-padding: 4rem;
-$footer-padding-mobile: 3rem;
+$footer-line-height: 2rem;
+$fonter-font: 1rem;
+$item-margin:1rem;
 
 :host {
-    @include mixins.block(100%, $footer-height);
-    margin-top: 6rem;
-    position: relative;
+    @include mixins.block(100%, auto);
+    margin:3rem 0;
+    text-align: center;
+
+    >div{
+        margin-top: $item-margin ;
+    }
 }
 
 .media{
 
-    height: $footer-height;
+    height: $footer-line-height;
     text-align: center;
 
     a {
         @include mixins.block(1.5rem, 1.5rem, inline-block);
 
-        margin:0 0.625rem;
+        background-color:colors.$font;
+        margin-right:$item-margin;
         vertical-align: middle;
         cursor: pointer;
     }
 
     .linkedin {
-        background: url('../../assets/img/linkedin.svg') no-repeat center;
+        mask: url('../../assets/img/linkedin.svg') no-repeat center;
     }
 
     .facebook {
-        background: url('../../assets/img/facebook.svg') no-repeat center;
+        mask: url('../../assets/img/facebook.svg') no-repeat center;
     }
 
     .youtube {
-        background: url('../../assets/img/youtube.svg') no-repeat center;
+        mask: url('../../assets/img/youtube.svg') no-repeat center;
     }
 
     .instagram {
-        background: url('../../assets/img/instagram.svg') no-repeat center;
+        mask: url('../../assets/img/instagram.svg') no-repeat center;
     }
 }
 
 .items{
-    position: absolute;
-    top: 0rem;
-    right: $footer-padding;
-    text-align: right;
 
     a{
-        @include mixins.block(auto, $footer-height, inline-block);
+        @include mixins.block(auto, $footer-line-height, inline-block);
 
-        margin:0 0.625rem;
-        font-size: 0.75rem;
+        margin-right:$item-margin;
+        font-size: $fonter-font;
         cursor: pointer;
     }
 }
 
 .copyright{
-    @include mixins.position(0, $footer-padding);
-
     color:colors.$font-secondary;
-    font-size: 0.75rem;
-}
-
-@media screen and (max-width: settings.$response-width-middle) {
-    :host {
-        height: $footer-height-mobile;
-        padding: $footer-padding-mobile 0;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .media{
-        height: 1.5rem;
-    
-        a {
-            @include mixins.block(1.5rem, 1.5rem, inline-block);
-            margin:0 0.625rem;
-            vertical-align: middle;
-        }
-    
-    }
-    
-    .items{
-        position: static;
-        margin-top: 2.5rem;
-        text-align: center;
-    }
-    
-    .copyright{
-        position: static;
-        margin-top: 0.625rem;
-    }
+    font-size: $fonter-font;
 }

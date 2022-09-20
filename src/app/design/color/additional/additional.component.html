@@ -1,0 +1,42 @@
+<p>additional works!</p>
+<div class='md-content'>
+    <h1>Lui</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of lui">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+    <h1>Dui</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of dui">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+    <h1>Common</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of common">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+</div>

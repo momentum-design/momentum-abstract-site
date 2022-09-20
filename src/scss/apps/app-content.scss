@@ -1,0 +1,13 @@
+@use 'mixins.scss' as mixins;
+
+.app-content {
+    @include mixins.block(100%, auto);
+
+    h1 {
+        @include mixins.block(100%, 10rem);
+    }
+
+    div {
+        @include mixins.block(100%, auto);
+    }
+}

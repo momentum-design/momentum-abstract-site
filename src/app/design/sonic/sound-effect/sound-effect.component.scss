@@ -1,0 +1,16 @@
+@use 'mixins.scss' as mixins;
+
+.sonic-line{
+    @include mixins.block(auto, 3rem);
+    margin-top: 0.5rem;;
+
+    span {
+        @include mixins.block(auto, 3rem, inline-block);
+        min-width: 10rem;
+        margin-right: 1rem;
+    }
+
+    *{
+        vertical-align: middle;
+    }
+}

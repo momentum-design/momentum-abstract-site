@@ -1,5 +1,5 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface INav {
   path: string,
@@ -12,34 +12,22 @@ interface INav {
   styleUrls:['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements AfterViewInit  {
+export class HeaderComponent {
 
-  motion:any;
-  isShowMenu:boolean = false;
   public navs: INav[];
-  public title: string = '';
 
   constructor(
     private router: Router
     ) {
     this.initNav();
-    this.router.events.subscribe((event) => {
-      if(event instanceof NavigationEnd) {
-        this.title = event.url.split('/')[1] || '';
-      }
-    });
-  }
-
-  ngAfterViewInit() {
-
   }
 
   private initNav() {
     this.navs = this.router.config.filter((cfg)=>{
-      return cfg.data && typeof cfg.data.navIndex === 'number';
+      return cfg.data && typeof cfg.data.sort === 'number';
     }).sort((cfg1,cfg2)=>{
       if(cfg1.data && cfg2.data) {
-        return cfg1.data.navIndex - cfg2.data.navIndex;
+        return cfg1.data.sort - cfg2.data.sort;
       }
       return -1;
     }).map((cfg)=>{

@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'colors.scss' as colors;
+@use 'theme/light.scss' as colors;
+@use 'theme/dark.scss' as colors_dark;
 @use 'mixins.scss' as mixins;
+@import 'apps/index';
 
 @font-face {
     font-family: 'CiscoSansTT';
@@ -14,16 +16,26 @@
 * {
     font-family: CiscoSansTT, Arial, Helvetica, sans-serif;
     margin: 0px;
-    height: 0px;
-    color: colors.$font-primary;
+    padding: 0px;
+    color: colors.$font;
     text-decoration: none;
 }
 
 body,html {
-  background-color: colors.$background-primary;
+  background-color: colors.$background;
   min-width: 375px;
+  height: 100%;
 }
 
-body{
-  @include mixins.placeholder(100%, 6rem);
+.markdown-body {
+  background-color: colors.$background;
+
+  pre, code {
+    background-color: colors_dark.$background-surface;
+  }
+
+}
+
+code * {
+  color: colors_dark.$font;
 }

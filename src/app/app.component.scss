@@ -1,0 +1,32 @@
+@use 'settings.scss' as settings;
+@use 'functions.scss' as func;
+@use 'mixins.scss' as mixins;
+
+:host {
+    @include mixins.block(100%, 100%, flex);
+
+    flex-direction: column;
+
+    mds-header {
+        flex: none;
+    }
+
+    .app-main {
+        @include mixins.block(100%, auto, flex);
+        align-items: flex-start;
+        flex-direction: row;
+        flex: 1;
+
+        mds-side {
+            height: 100%;
+            flex: none;
+        }
+
+        .app-right {
+            height: 100%;
+            margin: 0 2rem 0 1rem;
+            flex: 1;
+        }
+    }
+}
+

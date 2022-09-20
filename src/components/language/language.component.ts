@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { PlatformLocation } from '@angular/common';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { LanguageService } from './language.service';
 
 @Component({
   selector: 'mds-language',
@@ -8,29 +8,36 @@ import { PlatformLocation } from '@angular/common';
 })
 export class LanguageComponent  {
 
-	langs:Record<string, string> = {
-		'en-US': 'EN',
-		'zh': '中'
-	};
-	langIDs:string[];
-	currentLang:string = 'en-US';
+	langs:Record<string, string>;
+	langsID:string[]=[];
+	currentLang:string;
 	baseHref:string;
 
-	constructor(private platformLocation: PlatformLocation) {
-		this.baseHref = this.platformLocation.getBaseHrefFromDOM();
-		let ids = Object.keys(this.langs);
-		this.currentLang = ids.find((id)=>{
-			return new RegExp(`\/${id.replace(/\-/g,'\\-')}\/$`).test(this.baseHref);
-		}) || 'en-US';
-		this.langIDs = ids.sort((a,b)=>{
-			return b === this.currentLang ? 1 : 0;
+	constructor(
+		private languageService: LanguageService,
+		private cd: ChangeDetectorRef
+		) {
+		this.update();
+		this.languageService.current$.subscribe((v)=>{
+			this.update(v);
+			if (this.cd) {
+				this.cd.detectChanges();
+			}
 		});
+	}
+
+	update(v?:string) {
+		this.langs = this.languageService.langs;
+		this.baseHref = this.languageService.baseHref;
+		this.langsID = this.languageService.langsID;
+		this.currentLang = v || this.languageService._current;
 	}
 
 	switchLang(lang:string) {
 		let newBaseHref = this.baseHref.replace(new RegExp(`\/${this.currentLang.replace(/\-/g,'\\-')}\/$`), `/${lang}/`);
-		console.log(newBaseHref);
-		location.href = location.href.replace(this.baseHref, newBaseHref);
+		let newUrl = location.href.replace(this.baseHref, newBaseHref);
+		newUrl = newUrl.replace(/^http:\/\//, 'https://');
+		location.href = newUrl;
 	}
 
 }

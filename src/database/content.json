@@ -1,0 +1,356 @@
+{
+	"en-US": {
+		"design": {
+			"$data": {
+				"fullPath": "design",
+				"id": "design",
+				"name": "design",
+				"sort": 2,
+				"isDirectory": true
+			},
+			"overall": {
+				"$data": {
+					"fullPath": "design/overall",
+					"id": "overall",
+					"name": "overall",
+					"sort": 1
+				}
+			},
+			"color": {
+				"$data": {
+					"fullPath": "design/color",
+					"id": "color",
+					"name": "color",
+					"sort": 2,
+					"isDirectory": true
+				},
+				"color-system": {
+					"$data": {
+						"fullPath": "design/color/color-system",
+						"id": "color-system",
+						"name": "color system",
+						"sort": 1
+					}
+				}
+			},
+			"font": {
+				"$data": {
+					"fullPath": "design/font",
+					"id": "font",
+					"name": "font",
+					"sort": 3,
+					"isDirectory": true
+				},
+				"font-system": {
+					"$data": {
+						"fullPath": "design/font/font-system",
+						"id": "font-system",
+						"name": "font system",
+						"sort": 1
+					}
+				}
+			},
+			"sonic": {
+				"$data": {
+					"fullPath": "design/sonic",
+					"id": "sonic",
+					"name": "sonic",
+					"sort": 6,
+					"isDirectory": true
+				},
+				"sound-system": {
+					"$data": {
+						"fullPath": "design/sonic/sound-system",
+						"id": "sound-system",
+						"name": "sound system",
+						"sort": 1
+					}
+				}
+			}
+		},
+		"develop": {
+			"$data": {
+				"fullPath": "develop",
+				"id": "develop",
+				"name": "develop",
+				"sort": 3,
+				"isDirectory": true
+			},
+			"overall": {
+				"$data": {
+					"fullPath": "develop/overall",
+					"id": "overall",
+					"name": "overall",
+					"sort": 1
+				}
+			},
+			"get-momentum-elements": {
+				"$data": {
+					"fullPath": "develop/get-momentum-elements",
+					"id": "get-momentum-elements",
+					"name": "get momentum elements",
+					"sort": 2,
+					"isDirectory": true
+				},
+				"momentum-abstract": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/momentum-abstract",
+						"id": "momentum-abstract",
+						"name": "momentum-abstract",
+						"sort": 1
+					}
+				},
+				"all-elements": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/all-elements",
+						"id": "all-elements",
+						"name": "all elements",
+						"sort": 2
+					}
+				},
+				"usage": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/usage",
+						"id": "usage",
+						"name": "usage",
+						"sort": 3
+					}
+				},
+				"version": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/version",
+						"id": "version",
+						"name": "version",
+						"sort": 4
+					}
+				}
+			},
+			"use-momentum-tools": {
+				"$data": {
+					"fullPath": "develop/use-momentum-tools",
+					"id": "use-momentum-tools",
+					"name": "use momentum tools",
+					"sort": 3,
+					"isDirectory": true
+				},
+				"overall": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/overall",
+						"id": "overall",
+						"name": "overall",
+						"sort": 1
+					}
+				},
+				"common": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/common",
+						"id": "common",
+						"name": "common",
+						"sort": 2
+					}
+				},
+				"svgsymbol": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/svgsymbol",
+						"id": "svgsymbol",
+						"name": "svgsymbol",
+						"sort": 3
+					}
+				}
+			},
+			"component-libraries": {
+				"$data": {
+					"fullPath": "develop/component-libraries",
+					"id": "component-libraries",
+					"name": "component libraries",
+					"sort": 4
+				}
+			},
+			"contribute": {
+				"$data": {
+					"fullPath": "develop/contribute",
+					"id": "contribute",
+					"name": "contribute",
+					"sort": 5
+				}
+			}
+		}
+	},
+	"zh": {
+		"design": {
+			"$data": {
+				"fullPath": "design",
+				"id": "design",
+				"name": "设计",
+				"sort": 2,
+				"isDirectory": true
+			},
+			"overall": {
+				"$data": {
+					"fullPath": "design/overall",
+					"id": "overall",
+					"name": "overall",
+					"sort": 1
+				}
+			},
+			"color": {
+				"$data": {
+					"fullPath": "design/color",
+					"id": "color",
+					"name": "颜色",
+					"sort": 2,
+					"isDirectory": true
+				},
+				"color-system": {
+					"$data": {
+						"fullPath": "design/color/color-system",
+						"id": "color-system",
+						"name": "颜色系统",
+						"sort": 1
+					}
+				}
+			},
+			"font": {
+				"$data": {
+					"fullPath": "design/font",
+					"id": "font",
+					"name": "字体",
+					"sort": 3,
+					"isDirectory": true
+				},
+				"font-system": {
+					"$data": {
+						"fullPath": "design/font/font-system",
+						"id": "font-system",
+						"name": "字体系统",
+						"sort": 1
+					}
+				}
+			},
+			"sonic": {
+				"$data": {
+					"fullPath": "design/sonic",
+					"id": "sonic",
+					"name": "声音",
+					"sort": 6,
+					"isDirectory": true
+				},
+				"sound-system": {
+					"$data": {
+						"fullPath": "design/sonic/sound-system",
+						"id": "sound-system",
+						"name": "声音系统",
+						"sort": 1
+					}
+				}
+			}
+		},
+		"develop": {
+			"$data": {
+				"fullPath": "develop",
+				"id": "develop",
+				"name": "开发",
+				"sort": 3,
+				"isDirectory": true
+			},
+			"overall": {
+				"$data": {
+					"fullPath": "develop/overall",
+					"id": "overall",
+					"name": "概览",
+					"sort": 1
+				}
+			},
+			"get-momentum-elements": {
+				"$data": {
+					"fullPath": "develop/get-momentum-elements",
+					"id": "get-momentum-elements",
+					"name": "获取momentum元素",
+					"sort": 2,
+					"isDirectory": true
+				},
+				"momentum-abstract": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/momentum-abstract",
+						"id": "momentum-abstract",
+						"name": "momentum-abstract",
+						"sort": 1
+					}
+				},
+				"all-elements": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/all-elements",
+						"id": "all-elements",
+						"name": "所有元素",
+						"sort": 2
+					}
+				},
+				"usage": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/usage",
+						"id": "usage",
+						"name": "用法",
+						"sort": 3
+					}
+				},
+				"version": {
+					"$data": {
+						"fullPath": "develop/get-momentum-elements/version",
+						"id": "version",
+						"name": "版本",
+						"sort": 4
+					}
+				}
+			},
+			"use-momentum-tools": {
+				"$data": {
+					"fullPath": "develop/use-momentum-tools",
+					"id": "use-momentum-tools",
+					"name": "使用momentum工具",
+					"sort": 3,
+					"isDirectory": true
+				},
+				"overall": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/overall",
+						"id": "overall",
+						"name": "overall",
+						"sort": 1
+					}
+				},
+				"common": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/common",
+						"id": "common",
+						"name": "common",
+						"sort": 2
+					}
+				},
+				"svgsymbol": {
+					"$data": {
+						"fullPath": "develop/use-momentum-tools/svgsymbol",
+						"id": "svgsymbol",
+						"name": "svgsymbol",
+						"sort": 3
+					}
+				}
+			},
+			"component-libraries": {
+				"$data": {
+					"fullPath": "develop/component-libraries",
+					"id": "component-libraries",
+					"name": "组件库",
+					"sort": 4
+				}
+			},
+			"contribute": {
+				"$data": {
+					"fullPath": "develop/contribute",
+					"id": "contribute",
+					"name": "参与momentum开发",
+					"sort": 5
+				}
+			}
+		}
+	}
+}

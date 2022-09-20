@@ -1,17 +1,22 @@
-@use 'colors.scss' as colors;
+@use 'theme/dark.scss' as colors;
 @use 'mixins.scss' as mixins;
 @use 'settings.scss' as settings;
 @use 'functions.scss' as func;
 
-$height-header: 4rem;
+$height-header: 5rem;
 $font-nav: 1.25rem;
-$padding-header: 2rem;
+$padding-header: 2.5rem;
 $padding-header-small: 0.5rem;
-$padding-nav:0.5rem;
-$margin-nav:1rem;
+$margin-nav: 1.25rem;
+
 
 :host {
     @include mixins.block(100%, $height-header);
+
+    *{
+        color: colors.$font;
+        background-color: colors.$background;        
+    }
 }
 
 .header {
@@ -22,25 +27,26 @@ $margin-nav:1rem;
     align-items: center;
 
     .logo {
-        @include mixins.block(func.rem-calc(140), $height-header);
+        @include mixins.block(func.rem-calc(134), $height-header);
         flex: 1;
         margin-left: $padding-header;
-        background: url('../../assets/img/logo.svg') no-repeat left center;
+        background: url('../../assets/img/momentum.svg') no-repeat left center;
         cursor: pointer;
     }
 
     .nav {
         @include mixins.block(auto, $height-header);
-        padding: 0 $padding-nav;
+
+        position: relative;
         margin-right: $margin-nav;
         flex: none;
         font-size: $font-nav;
         text-align: center;
-        text-transform: lowercase;
+        text-transform: capitalize;
         cursor: pointer;
 
         &:hover {
-            color: colors.$font-primary-hover;
+            color: colors.$font-current;
         }
     }
 
@@ -49,8 +55,12 @@ $margin-nav:1rem;
         margin-right: $font-nav;
     }
 
-    .current, .current:hover{
-        color: colors.$font-selected!important;
+    .current::after{
+        content: '';
+        @include mixins.block(100%, 0.5rem);
+        @include mixins.position4(auto, auto,0,0);
+        
+        background-color: colors.$font;
     }
 }
 
@@ -62,7 +72,7 @@ $margin-nav:1rem;
         }
 
         .nav {
-            margin-right:0;
+            margin-right: $padding-header-small;
         }
 
         .language {

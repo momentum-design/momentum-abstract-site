@@ -1,0 +1,14 @@
+@use 'mixins.scss' as mixins;
+@use 'functions.scss' as func;
+@use 'theme/light.scss' as colors;
+@use 'theme/dark.scss' as dark;
+
+:host {
+    @include mixins.block(100%, auto);
+
+    .loading {
+        text-align: center;
+        height: func.rem-calc(200);
+        margin-top: 1rem;
+    }
+}

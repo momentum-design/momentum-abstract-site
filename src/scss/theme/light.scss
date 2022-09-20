@@ -1,0 +1,13 @@
+@use '_colors/core.scss' as core;
+//@use 'theme/light.scss' as colors;
+$background:core.$white-alpha-100;
+$background-surface:core.$gray-30;
+$background-surface-on: core.$gray-40;
+$background-pop: core.$gray-50;
+
+$font: core.$black-alpha-100;
+$font-current: core.$blue-40;
+
+$font-secondary: core.$gray-70;
+
+$border: core.$black-alpha-20;

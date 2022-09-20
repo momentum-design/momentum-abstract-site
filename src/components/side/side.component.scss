@@ -1,0 +1,68 @@
+@use 'theme/light.scss' as colors;
+@use 'mixins.scss' as mixins;
+@use 'settings.scss' as settings;
+
+$height: 3rem;
+$width: 20rem;
+$font-nav: 1rem;
+$font-nav-child: 0.875rem;
+$padding-header: 2rem;
+$padding-header-small: 0.5rem;
+$padding-nav:0.5rem;
+$margin-nav:1rem;
+
+@mixin line($font-size, $indent) {
+    @include mixins.block($width, $height,flex);
+
+    >a {
+        @include mixins.block(auto, $height);
+
+        font-size: $font-size;
+        text-indent: $indent;
+        vertical-align: center;
+        flex: 1;
+    }
+
+    &:hover {
+        background: colors.$background-surface;
+    }
+}
+
+:host {
+    @include mixins.block($width, auto);
+    flex: none;
+
+    &::before {
+        @include mixins.block($width, 1rem,flex);
+
+        content: '';
+    }
+
+    .sub-nav {
+        @include mixins.block($width, auto);
+
+        .sub-nav-line {
+            @include line($font-nav, 1rem);
+        }
+
+        .sub-nav-line-child{
+            @include line($font-nav-child, 2rem);
+
+            >a {
+                color: colors.$font-secondary;
+            }
+        }
+
+        .current, .current:hover{
+            color: colors.$font-current!important;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: settings.$response-width-small) {
+    :host {
+        display: none;
+    }
+}

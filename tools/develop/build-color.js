@@ -1,7 +1,10 @@
 const { MomentumAbstractType, mfs, mconvert } = require('momentum-constructor-common');
 const write = require('write');
 const path = require('path');
-const folderPath = path.resolve(__dirname,'../../src/scss/colors/');
+const { my_path } = require('../../myconfig');
+
+const folderPath = path.resolve(my_path.scss,'_colors');
+const momentumPath = path.resolve(my_path.assets_momentum, 'color');
 
 const rgbaStr = (rgba)=> {
     return `rgba(${rgba.r},${rgba.g},${rgba.b},${rgba.a})`
@@ -28,6 +31,7 @@ const generateScss = (file) => {
 
 const buildColor = async ()=> {
     let files = mfs.read(MomentumAbstractType.color);
+    mfs.saveFiles(files, momentumPath);
     files = mconvert.flat(files, MomentumAbstractType.color);
     Object.values(files).forEach((file)=>{
         generateScss(file);

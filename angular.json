@@ -71,7 +71,7 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "localize": ["zh"]
+              "localize": ["en-US"]
             }
           },
           "defaultConfiguration": "production"

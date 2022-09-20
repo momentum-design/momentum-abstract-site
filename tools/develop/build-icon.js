@@ -1,6 +1,7 @@
 const { MomentumAbstractType, mfs, mcommon } = require('momentum-constructor-common');
 const path = require('path');
-const targetPath = path.resolve(__dirname,'../../src/assets/icon/');
+const { my_path } = require('../../myconfig');
+const targetPath = path.resolve(my_path.assets_momentum, 'icon');
 
 const buildIcon = async ()=> {
     mfs.clean(targetPath);

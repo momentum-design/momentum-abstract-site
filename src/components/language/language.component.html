@@ -1,6 +1,6 @@
 <a class="lang">{{langs[currentLang]}}<i></i></a>
 <div class="pop">
-    <a *ngFor="let id of langIDs" 
+    <a *ngFor="let id of langsID" 
         (click)="switchLang(id)"
     >{{langs[id]}}<i *ngIf="id===currentLang"></i></a>
 </div>

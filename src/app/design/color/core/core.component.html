@@ -1,0 +1,60 @@
+<div class='md-content'>
+    <h1>Core</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Hex</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of core">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color' [ngClass]="{'td-gray': series.name ==='white-alpha'}"><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.hex }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+    <h1>Decorative</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Hex</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of decorative">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.hex }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+    <h1>Gradation</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Color</div>
+    </div>
+    <ng-container  *ngFor="let series of gradation">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.hex }}</div>
+        </div>
+    </ng-container>
+    <h1>Mobile</h1>
+    <div class='tr'>
+        <div class='td td-color'>Example</div>
+        <div class='td'>Token</div>
+        <div class='td'>Hex</div>
+        <div class='td'>Rgba</div>
+    </div>
+    <ng-container  *ngFor="let series of mobile">
+        <div *ngFor="let nav of series.tokens" class='tr'>
+            <div class='td td-color'><a [ngStyle]="{background: nav.css}"></a></div>
+            <div class='td'>{{ nav.token }}</div>
+            <div class='td'>{{ nav.hex }}</div>
+            <div class='td'>{{ nav.rgba }}</div>
+        </div>
+    </ng-container>
+</div>

@@ -16,3 +16,11 @@ export interface IScrollMotion {
     checkScroll: ()=>void;
     initMotion:(startPlus?:number, endPlus?:number)=> void;
 }
+
+export interface INavigationData {
+    fullPath: string,
+    name: string,
+    id:string,
+    sort: number,
+    isDirectory?: boolean
+}
