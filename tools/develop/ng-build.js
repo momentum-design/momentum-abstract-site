@@ -8,6 +8,7 @@ class MyBuilder {
 
     config;
     
+    //build
     constructor() {
         const args = getArgs();
         this.config = Object.assign({
