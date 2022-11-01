@@ -1,0 +1,60 @@
+@use './mixins.scss' as mixins;
+@use './theme/light.scss' as light;
+
+.md-content {
+    h1 {
+        @include mixins.block(100%, 3rem);
+    
+        margin: 1rem 0;
+        border-bottom: 1px solid light.$border;
+    }
+    
+    .tr {
+        @include mixins.block(100%, auto, flex);
+        min-height: 1.5rem;
+        align-items:center;
+        text-align: center;
+        margin-top: 0.5rem;
+    
+        .td {
+            @include mixins.block(6.25rem, auto);
+            flex: 1;
+            overflow: hidden;
+        }
+    
+        .td-large {
+            @include mixins.block(8rem, auto);
+            flex: 1;
+            overflow: visible;
+        }
+    
+        .td-f {
+            @include mixins.block(auto, auto);
+    
+            max-height: 100%;
+            text-align: left;
+            overflow: hidden;
+            flex: 2.5;
+        }
+    
+        .td-f-s {
+            flex: 1;
+        }
+
+        .td-color {
+            flex: none;
+            width: 5rem;
+            overflow: visible;
+
+            a{
+                @include mixins.block(100%, 1rem);
+
+                border: 1px solid light.$border;
+            }
+        }
+
+        .td-gray {
+            background: light.$background-pop;
+        }
+    }
+}

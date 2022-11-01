@@ -1,0 +1,4 @@
+<div *ngIf="!content" class="loading">
+    <img src="assets/img/spinner.svg" />
+</div>
+<div *ngIf="content" class='markdown-body' [innerHTML]="content" ></div>

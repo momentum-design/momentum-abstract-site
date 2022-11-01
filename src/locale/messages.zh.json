@@ -1,0 +1,19 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "get-started": "开始",
+    "design": "设计",
+    "develop": "开发",
+    "components": "组件",
+    "resources": "资源",
+    "token": "令牌",
+    "core": "核心",
+    "theme": "样式",
+    "additional": "补充",
+    "sound effect": "音效",
+    "terms-conditions": "条款和条件",
+    "privac-statementy": "隐私声明",
+    "trademarks": "商标",
+    "copyright": "©版权归思科或其附属公司所有。"
+  }
+}

@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:    
+      - master
+      - main
+    paths:
+      - '**'
+name: Publish momentum site
+jobs:
+  jobBuild:
+    name: Publish momentum site
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out
+      uses: actions/checkout@master
+      with:
+          fetch-depth: 2
+    - name: Install Package
+      run: npm install
+    - name: pre build
+      run: npm run pre-build
+    - name: ng build
+      run: npm run build repo='${{ github.repository }}'
+    - name: Push git subdirectory as branch
+      uses: s0/git-publish-subdir-action@v2.5.1
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: dist
+        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }} 
+        SKIP_EMPTY_COMMITS: true
+        MESSAGE: "[skip ci](build static site):{msg}"

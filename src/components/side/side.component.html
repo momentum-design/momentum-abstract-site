@@ -1,0 +1,8 @@
+<div class="sub-nav" *ngFor="let nav of navs">
+    <div class="sub-nav-line">
+        <a [routerLink]="nav.data.fullPath" routerLinkActive="current">{{nav.data.name}}</a>
+    </div>
+    <div class="sub-nav-line-child" *ngFor="let childNav of nav.children">
+        <a [routerLink]="childNav.data.fullPath" routerLinkActive="current">{{childNav.data.name}}</a>
+    </div>
+</div>

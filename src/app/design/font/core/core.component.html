@@ -1,0 +1,15 @@
+<div class='md-content'>
+    <h1>Core</h1>
+    <div class='tr'>
+        <div class='td-f td-f-s'>Token</div>
+        <div class='td'>Exmaple</div>
+        <div class='td'>Size</div>
+        <div class='td'>Line-height</div>
+    </div>
+    <div  *ngFor="let nav of core" class='tr' [ngStyle]="{height: nav.value.lineHeight+'px', 'line-height': nav.value.lineHeight+'px'}">
+        <div class='td-f  td-f-s'>{{ nav.token }}</div>
+        <div [ngClass]="[nav.class,'td','td-large']">Ag</div>
+        <div class='td'>{{ nav.value.fontSize }}</div>
+        <div class='td'>{{ nav.value.lineHeight }}</div>
+    </div>
+</div>

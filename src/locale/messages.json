@@ -1,0 +1,18 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "get-started": "get started",
+    "design": "design",
+    "develop": "develop",
+    "components": "components",
+    "resources": "resources",
+    "core": "core",
+    "theme": "theme",
+    "additional": "additional",
+    "sound effect": "sound effect",
+    "terms-conditions": "Terms & Conditions",
+    "privac-statementy": "Privacy Statement",
+    "trademarks": "Trademarks",
+    "copyright": "©2022 Cisco and/or its affiliates. All Rights Reserved."
+  }
+}

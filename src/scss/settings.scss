@@ -1,0 +1,14 @@
+@use 'functions.scss' as func;
+
+$z-index-normal:100;
+$z-index-fixed:200;
+$z-index-absolute:300;
+$z-index-pop:400;
+$z-index-max:1000;
+
+$response-width-small: func.rem-calc(560);
+$response-width-middle: func.rem-calc(1080);
+$response-width-large: func.rem-calc(1440);
+$response-width-xlarge: func.rem-calc(1920);
+$response-width-xxlarge: func.rem-calc(2560);
+
