@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Momentum</title>
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <script>
+            let regHttp = /^http:\/\//;
+            if(regHttp.test(location.href)) {
+                location.href = location.href.replace(regHttp, 'https:\/\/');
+            } else {
+                let baseUrl = 'https://momentum-design.github.io/momentum-website/';
+                let path = location.href.replace(baseUrl,'');
+                let arr = path.split('/');
+                if(arr.length>0) {
+                    let lang = arr[0];
+                    let restUrl = arr.slice(1).join('/');
+                    location.href = baseUrl+lang+'/#/'+restUrl;
+                }                
+            }
+        </script>
+    </head>
+    <body></body>
+</html>
